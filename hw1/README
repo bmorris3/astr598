@@ -1,3 +1,8 @@
 ASTR598 HW1
 Brett Morris
 
+To run the code, cd into hw1, run myprogram.py with:
+
+python myprogram.py
+
+This package requires numpy and astropy.
