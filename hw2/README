@@ -1,0 +1,10 @@
+ASTR598 HW2
+Brett Morris
+
+To run the code, cd into hw2, run myprogram.py with:
+
+python myprogram.py
+
+We do not have a function `delete_at_tail` because in order to find the tail,
+you must traverse through all nodes but the final node, which is an O(N)
+operation.
