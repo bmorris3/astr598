@@ -54,23 +54,3 @@ class Queue(object):
 
     def is_empty(self):
         return self.N == 0
-
-    # def traverse(self):
-    #     """
-    #     Traverse the linked list, return a Python `list` of the data values
-    #     at each node, in order. (For debugging)
-    #     """
-    #     traversed_list = []
-    #     node_i = self.head
-    #     while node_i.next is not None:
-    #         traversed_list.append(node_i.data)
-    #         node_i = node_i.next
-    #     else:
-    #         # Include the last node
-    #         traversed_list.append(node_i.data)
-    #
-    #     return traversed_list
-    #
-    # def __repr__(self):
-    #     return "<Stack: "+str(self.traverse())+">"
-    #
