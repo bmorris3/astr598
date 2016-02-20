@@ -9,21 +9,19 @@ import matplotlib.pyplot as plt
 
 from mergesort import mergesort
 
-# Twenty randomly shuffled integers from 1 to 21
-integers = [16, 13, 10, 12, 15, 6, 11, 3, 19, 1, 20, 9, 7,
-            2, 5, 4, 14, 18, 17, 8]
-
-sorted_integers = mergesort(integers)
-
-
 sizes = [1e2, 1e4, 1e6, 1e8]
 runtimes = []
+n_trials = 2
 for size in sizes:
     int_list = np.random.randint(0, 1000, size)
-    start = time.time()
-    mergesort(int_list)
-    end = time.time()
-    runtimes.append(end-start)
+    runtime = []
+    for trial in range(n_trials):
+        start = time.time()
+        mergesort(int_list)
+        end = time.time()
+        runtime.append(end-start)
+    print(runtime)
+    runtimes.append(np.mean(runtime))
 
 plt.loglog(sizes, runtimes)
 plt.xlabel('Array length')
